@@ -20,11 +20,7 @@ namespace Web_TARpv22.Controllers
         }
         private static List<Kasutaja> _kasutaja = new()
         {
-            new Kasutaja (1, "Test1", "123123", "test1","TEST1"),
-            new Kasutaja (2, "Test2", "123123", "test2", "TEST2"),
-            new Kasutaja (3, "Test3", "123123", "test3", "TEST3"),
-            new Kasutaja (4, "Test4", "123123", "test4", "TEST4"),
-            new Kasutaja (5, "Test5", "123123", "test5", "TEST5")
+
         };
 
         // GET /tooted
@@ -50,7 +46,7 @@ namespace Web_TARpv22.Controllers
         }
 
         // POST /tooted/lisa/1/pepsi/1.5/true
-        [HttpPost("lisa/{id}/{username}/{password}/{nimi}/{perenimi}")]
+        [HttpPost("lisa/{username}/{password}/{nimi}/{perenimi}")]
         public async Task<List<Kasutaja>> Add(int id, string username, string password, string nimi, string perenimi)
         {
             Kasutaja toode = new Kasutaja(id, username, password, nimi, perenimi);
